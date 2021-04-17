@@ -53,7 +53,10 @@
 
         private static string SerializeKey<TKey>(TKey key)
         {
-            return CacheKeyHasher.EncryptString(JsonSerializer.Serialize(key));
+            var serialized = JsonSerializer.Serialize(key);
+            serialized += Guid.NewGuid().ToString("D");
+            
+            return CacheKeyHasher.EncryptString(serialized);
         }
     }
 }
