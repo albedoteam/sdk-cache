@@ -1,0 +1,29 @@
+name: Release Creator
+description: Create a tag and a Release for the specific project
+inputs:
+  version:
+    type: string
+    required: true
+    description: Version
+  branch:
+    type: string
+    required: true
+    description: Branch name
+  github-token:
+    type: string
+    required: true
+    description: GitHub Token
+runs:
+  using: "composite"
+    steps:
+    
+    - name: Create tag and GitHub release
+      if: ${{ inputs.branch == 'main' }}
+      uses: actions/create-release
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      with:
+        tag_name: ${{ inputs.version }}
+        release_name: v${{ inputs.version }}
+        draft: false
+        prerelease: false
