@@ -4,6 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>AlbedoTeam.Sdk.Cache</AssemblyName>
         <RootNamespace>AlbedoTeam.Sdk.Cache</RootNamespace>
+        <Version>1.0.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
