@@ -1,0 +1,11 @@
+name: Albedo Team CI SDK on PUSH
+
+on:
+  push:
+    branches: [rc, main]
+
+jobs:
+  api-on-pr:
+    name: SDK on Push
+    uses: albedoteam/workflows/.github/workflows/sdk-push.yml@main
+    secrets: inherit
