@@ -1,8 +1,7 @@
-﻿namespace AlbedoTeam.Sdk.Cache.Internals
+﻿namespace AlbedoTeam.Sdk.Cache.Internals;
+
+internal enum CacheKeyHashAlgorithm
 {
-    internal enum CacheKeyHashAlgorithm
-    {
-        Md5,
-        Sha1
-    }
+    Md5,
+    Sha1
 }

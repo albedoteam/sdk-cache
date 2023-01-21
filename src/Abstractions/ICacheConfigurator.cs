@@ -1,10 +1,9 @@
-﻿namespace AlbedoTeam.Sdk.Cache.Abstractions
-{
-    using System;
+﻿using System;
 
-    public interface ICacheConfigurator
-    {
-        ICacheOptions Options { get; }
-        ICacheConfigurator SetOptions(Action<ICacheOptions> configureOptions);
-    }
+namespace AlbedoTeam.Sdk.Cache.Abstractions;
+
+public interface ICacheConfigurator
+{
+    ICacheOptions Options { get; }
+    ICacheConfigurator SetOptions(Action<ICacheOptions> configureOptions);
 }
